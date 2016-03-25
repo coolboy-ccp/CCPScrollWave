@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		00F796E01CA4D29600BFA52D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F796DF1CA4D29600BFA52D /* main.m */; };
 		00F796E31CA4D29600BFA52D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F796E21CA4D29600BFA52D /* AppDelegate.m */; };
-		00F796E61CA4D29600BFA52D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F796E51CA4D29600BFA52D /* ViewController.m */; };
-		00F796E91CA4D29600BFA52D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F796E71CA4D29600BFA52D /* Main.storyboard */; };
 		00F796EB1CA4D29600BFA52D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F796EA1CA4D29600BFA52D /* Assets.xcassets */; };
 		00F796EE1CA4D29600BFA52D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F796EC1CA4D29600BFA52D /* LaunchScreen.storyboard */; };
+		00F796FA1CA4D2E000BFA52D /* SaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F796F61CA4D2E000BFA52D /* SaleViewController.m */; };
+		00F796FB1CA4D2E000BFA52D /* SaleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F796F71CA4D2E000BFA52D /* SaleViewController.xib */; };
+		00F796FC1CA4D2E000BFA52D /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F796F91CA4D2E000BFA52D /* WaveView.m */; };
+		00F796FF1CA4D7B200BFA52D /* fb_wave.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F796FE1CA4D7B200BFA52D /* fb_wave.png */; };
+		00F797011CA4D7D100BFA52D /* addCerditJIantou.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F797001CA4D7D100BFA52D /* addCerditJIantou.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,17 @@
 		00F796DF1CA4D29600BFA52D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00F796E11CA4D29600BFA52D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		00F796E21CA4D29600BFA52D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		00F796E41CA4D29600BFA52D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		00F796E51CA4D29600BFA52D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		00F796E81CA4D29600BFA52D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00F796EA1CA4D29600BFA52D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00F796ED1CA4D29600BFA52D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00F796EF1CA4D29600BFA52D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00F796F51CA4D2E000BFA52D /* SaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaleViewController.h; sourceTree = "<group>"; };
+		00F796F61CA4D2E000BFA52D /* SaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaleViewController.m; sourceTree = "<group>"; };
+		00F796F71CA4D2E000BFA52D /* SaleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaleViewController.xib; sourceTree = "<group>"; };
+		00F796F81CA4D2E000BFA52D /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
+		00F796F91CA4D2E000BFA52D /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
+		00F796FD1CA4D37E00BFA52D /* CCPScrollWave.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCPScrollWave.pch; sourceTree = "<group>"; };
+		00F796FE1CA4D7B200BFA52D /* fb_wave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_wave.png; sourceTree = "<group>"; };
+		00F797001CA4D7D100BFA52D /* addCerditJIantou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addCerditJIantou.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +68,11 @@
 			children = (
 				00F796E11CA4D29600BFA52D /* AppDelegate.h */,
 				00F796E21CA4D29600BFA52D /* AppDelegate.m */,
-				00F796E41CA4D29600BFA52D /* ViewController.h */,
-				00F796E51CA4D29600BFA52D /* ViewController.m */,
-				00F796E71CA4D29600BFA52D /* Main.storyboard */,
+				00F796F51CA4D2E000BFA52D /* SaleViewController.h */,
+				00F796F61CA4D2E000BFA52D /* SaleViewController.m */,
+				00F796F71CA4D2E000BFA52D /* SaleViewController.xib */,
+				00F796F81CA4D2E000BFA52D /* WaveView.h */,
+				00F796F91CA4D2E000BFA52D /* WaveView.m */,
 				00F796EA1CA4D29600BFA52D /* Assets.xcassets */,
 				00F796EC1CA4D29600BFA52D /* LaunchScreen.storyboard */,
 				00F796EF1CA4D29600BFA52D /* Info.plist */,
@@ -74,7 +84,10 @@
 		00F796DE1CA4D29600BFA52D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				00F796FE1CA4D7B200BFA52D /* fb_wave.png */,
+				00F797001CA4D7D100BFA52D /* addCerditJIantou.png */,
 				00F796DF1CA4D29600BFA52D /* main.m */,
+				00F796FD1CA4D37E00BFA52D /* CCPScrollWave.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -136,9 +149,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F796FF1CA4D7B200BFA52D /* fb_wave.png in Resources */,
 				00F796EE1CA4D29600BFA52D /* LaunchScreen.storyboard in Resources */,
 				00F796EB1CA4D29600BFA52D /* Assets.xcassets in Resources */,
-				00F796E91CA4D29600BFA52D /* Main.storyboard in Resources */,
+				00F797011CA4D7D100BFA52D /* addCerditJIantou.png in Resources */,
+				00F796FB1CA4D2E000BFA52D /* SaleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,23 +164,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F796E61CA4D29600BFA52D /* ViewController.m in Sources */,
+				00F796FC1CA4D2E000BFA52D /* WaveView.m in Sources */,
 				00F796E31CA4D29600BFA52D /* AppDelegate.m in Sources */,
 				00F796E01CA4D29600BFA52D /* main.m in Sources */,
+				00F796FA1CA4D2E000BFA52D /* SaleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		00F796E71CA4D29600BFA52D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				00F796E81CA4D29600BFA52D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		00F796EC1CA4D29600BFA52D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -261,7 +269,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = CCPScrollWave/CCPScrollWave.pch;
 				INFOPLIST_FILE = CCPScrollWave/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CCP.CCPScrollWave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,7 +282,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = CCPScrollWave/CCPScrollWave.pch;
 				INFOPLIST_FILE = CCPScrollWave/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CCP.CCPScrollWave;
 				PRODUCT_NAME = "$(TARGET_NAME)";

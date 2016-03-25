@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "SaleViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    SaleViewController *sale = [[SaleViewController alloc] initWithNibName:@"SaleViewController" bundle:nil];
+    self.window.rootViewController = sale;
+   // [self.window makeKeyWindow];
     return YES;
 }
 
