@@ -128,7 +128,7 @@
     for (int i = 0 ; i < self.views.count; i++) {
         UIView *view = self.views[i];
         if (view.alpha == 1.0) {
-            if ((* targetContentOffset).x - i * MAINSCROLLVIEW_WIDTH > 0) {
+            if ((int)((* targetContentOffset).x - i * MAINSCROLLVIEW_WIDTH) > 0) {
                 if (i != self.views.count - 1) {
                     UIView *view1 = self.views[i+1];
                     UIView *view2 = [self.backView viewWithTag:1001 + i];
@@ -148,7 +148,7 @@
                     break;
                 }
             }
-            else if ((* targetContentOffset).x - i * MAINSCROLLVIEW_WIDTH  < 0) {
+            else if ((int)((* targetContentOffset).x - i * MAINSCROLLVIEW_WIDTH  < 0)) {
                 if (i != 0) {
                     UIView *view1 = self.views[i-1];
                     UIView *view2 = [self.backView viewWithTag:999 + i];
