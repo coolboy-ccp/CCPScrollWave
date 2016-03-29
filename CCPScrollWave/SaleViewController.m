@@ -125,62 +125,50 @@
 
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    if (velocity.x > 0) {
-        for (int i = 0; i < self.views.count; i++) {
-            if (i != self.views.count - 1) {
-                UIView *view = self.views[i];
-                if (view.alpha == 1.0) {
-                    if ((velocity.x > 1000) || ((* targetContentOffset).x != i * (MAINSCROLLVIEW_WIDTH))) {
-                        UIView *view1 = self.views[i+1];
-                        UIView *view2 = [self.backView viewWithTag:1001 + i];
-                        UIView *view3 = [self.backView viewWithTag:1000 + i];
-                        UIButton *button1 = [self.backView viewWithTag:10001 + i];
-                        UIButton *button2 = [self.backView viewWithTag:10000 + i];
-                        [UIView animateWithDuration:0.3 animations:^{
-                            view.alpha = 0.6;
-                            view1.alpha = 1.0f;
-                            button1.selected = YES;
-                            button2.selected = NO;
-                            view2.backgroundColor = [UIColor redColor];
-                            view3.backgroundColor = RGBA(220, 220, 220, 1.0);
-                            view.transform = CGAffineTransformMakeScale(0.8, 0.8);
-                            
-                            view1.transform = CGAffineTransformMakeScale(1.0, 1.0);
-                        }];
-                        break;
-                    }
+    for (int i = 0 ; i < self.views.count; i++) {
+        UIView *view = self.views[i];
+        if (view.alpha == 1.0) {
+            if ((* targetContentOffset).x - i * MAINSCROLLVIEW_WIDTH > 0) {
+                if (i != self.views.count - 1) {
+                    UIView *view1 = self.views[i+1];
+                    UIView *view2 = [self.backView viewWithTag:1001 + i];
+                    UIView *view3 = [self.backView viewWithTag:1000 + i];
+                    UIButton *button1 = [self.backView viewWithTag:10001 + i];
+                    UIButton *button2 = [self.backView viewWithTag:10000 + i];
+                    [UIView animateWithDuration:0.3 animations:^{
+                        view.alpha = 0.6;
+                        button1.selected = YES;
+                        button2.selected = NO;
+                        view2.backgroundColor = [UIColor redColor];
+                        view3.backgroundColor = RGBA(220, 220, 220, 1.0);
+                        view.transform = CGAffineTransformMakeScale(0.8, 0.8);
+                        view1.alpha = 1.0f;
+                        view1.transform = CGAffineTransformMakeScale(1.0, 1.0);
+                    }];
+                    break;
+                }
+            }
+            else if ((* targetContentOffset).x - i * MAINSCROLLVIEW_WIDTH  < 0) {
+                if (i != 0) {
+                    UIView *view1 = self.views[i-1];
+                    UIView *view2 = [self.backView viewWithTag:999 + i];
+                    UIView *view3 = [self.backView viewWithTag:1000 + i];
+                    UIButton *button1 = [self.backView viewWithTag:9999 + i];
+                    UIButton *button2 = [self.backView viewWithTag:10000 + i];
+                    [UIView animateWithDuration:0.3 animations:^{
+                        view.alpha = 0.6;
+                        button1.selected = YES;
+                        button2.selected = NO;
+                        view2.backgroundColor = [UIColor redColor];
+                        view3.backgroundColor = RGBA(220, 220, 220, 1.0);
+                        view.transform = CGAffineTransformMakeScale(0.8, 0.8);
+                        view1.alpha = 1.0f;
+                        view1.transform = CGAffineTransformMakeScale(1.0, 1.0);
+                    }];
+                    break;
                 }
             }
         }
-    }
-    else if (velocity.x < 0) {
-        for (int i = 0; i < self.views.count; i++) {
-            if (i != 0) {
-                UIView *view = self.views[i];
-                if (view.alpha == 1.0) {
-                    if ((velocity.x < - 1000) || ((* targetContentOffset).x != i * MAINSCROLLVIEW_WIDTH)) {
-                        UIView *view = self.views[i];
-                        UIView *view1 = self.views[i-1];
-                        UIView *view3 = [self.backView viewWithTag:1000 + i];
-                        UIView *view2 = [self.backView viewWithTag:999 + i];
-                        UIButton *button1 = [self.backView viewWithTag:9999 + i];
-                        UIButton *button2 = [self.backView viewWithTag:10000 + i];
-                        [UIView animateWithDuration:0.3 animations:^{
-                            view.alpha = 0.6;
-                            view.transform = CGAffineTransformMakeScale(0.8, 0.8);
-                            view1.alpha = 1.0f;
-                            button1.selected = YES;
-                            button2.selected = NO;
-                            view2.backgroundColor = [UIColor redColor];
-                            view3.backgroundColor = RGBA(220, 220, 200, 1.0);
-                            view1.transform = CGAffineTransformMakeScale(1.0, 1.0);
-                        }];
-                        break;
-                    }
-                }
-            }
-        }
-        
     }
 }
 
